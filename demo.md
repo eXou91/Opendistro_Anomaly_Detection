@@ -8,12 +8,15 @@ https://towardsdatascience.com/exporting-pandas-data-to-elasticsearch-724aa4dd8f
 
 ## Running 
 
-docker pull amazon/opendistro-for-elasticsearch:1.12.0
-docker pull amazon/opendistro-for-elasticsearch-kibana:1.12.0
+docker build kibana_without_ssl/ --tag kibana_without_ssl
+docker build --tag es_without_ssl es_without_ssl/
 
 docker-compose up
 
 
+# command
+docker volume prune
+docker volume rm opendistro_anomaly_detection_odfe-data1
 
 
 
